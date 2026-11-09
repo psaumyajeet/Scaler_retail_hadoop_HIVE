@@ -1,0 +1,12 @@
+{
+  "shell_port": 55651,
+  "iopub_port": 35037,
+  "stdin_port": 41317,
+  "control_port": 35169,
+  "hb_port": 54929,
+  "ip": "127.0.0.1",
+  "key": "cffff69b-e8a2c8bdd50d516e1b0e96ac",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "pyspark3_env"
+}

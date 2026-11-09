@@ -1,0 +1,14 @@
+SELECT 
+    c.customer_key,
+    c.city,
+    c.state,
+    ROUND(SUM(f.net_amount), 2) AS total_spent
+FROM fact_sales_analytics f
+JOIN dim_customer_analytics c 
+    ON f.customer_key = c.customer_key
+GROUP BY 
+    c.customer_key,
+    c.city,
+    c.state
+ORDER BY 
+    total_spent DESC;

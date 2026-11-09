@@ -1,0 +1,15 @@
+SELECT 
+    s.store_key,
+    s.city,
+    s.region,
+    ROUND(SUM(f.net_amount), 2) AS total_sales_amount,
+    COUNT(DISTINCT f.order_id) AS total_orders
+FROM fact_sales_analytics f
+JOIN dim_store_analytics s 
+    ON f.store_key = s.store_key
+GROUP BY 
+    s.store_key,
+    s.city,
+    s.region
+ORDER BY 
+    total_sales_amount DESC;

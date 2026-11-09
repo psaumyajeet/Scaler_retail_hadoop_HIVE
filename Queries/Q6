@@ -1,0 +1,6 @@
+SELECT 
+    ROUND(SUM(net_amount) / COUNT(DISTINCT order_id), 2) AS overall_average_order_value,
+    ROUND(AVG(net_amount), 2) AS average_line_item_amount,
+    COUNT(DISTINCT order_id) AS total_orders,
+    ROUND(SUM(net_amount), 2) AS total_revenue
+FROM fact_sales_analytics;

@@ -1,0 +1,12 @@
+SELECT 
+    ROUND(
+        (COUNT(DISTINCT CASE WHEN order_count > 1 THEN customer_key END) * 100.0) / COUNT(DISTINCT customer_key), 
+        2
+    ) AS repeat_customer_percentage
+FROM (
+    SELECT 
+        customer_key, 
+        COUNT(DISTINCT order_id) AS order_count
+    FROM fact_sales_analytics
+    GROUP BY customer_key
+) t;

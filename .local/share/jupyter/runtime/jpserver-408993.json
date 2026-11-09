@@ -1,0 +1,13 @@
+{
+  "base_url": "/jupyter/user/sclsepb4532/",
+  "hostname": "127.0.0.1",
+  "password": false,
+  "pid": 408993,
+  "port": 58865,
+  "root_dir": "/home/sclsepb4532",
+  "secure": false,
+  "sock": "",
+  "token": "",
+  "url": "http://127.0.0.1:58865/jupyter/user/sclsepb4532/",
+  "version": "1.18.1"
+}

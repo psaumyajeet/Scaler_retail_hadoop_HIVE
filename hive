@@ -1,0 +1,22 @@
+--DROP TABLE IF EXISTS stores;
+
+CREATE EXTERNAL TABLE IF NOT EXISTS clickstream_logs (
+    event_id STRING,
+    customer_id STRING,
+    session_id STRING,
+    event_type STRING,
+    product_id STRING,
+    event_timestamp TIMESTAMP,
+    device_type STRING,
+    location_city STRING,
+    page_url STRING,
+    referrer_source STRING
+    
+)
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ','
+TBLPROPERTIES ("skip.header.line.count" = "1");
+
+LOAD DATA LOCAL INPATH '/home/sclsepb4532/stage/clickstream_logs.csv' INTO TABLE clickstream_logs;
+
+select * from clickstream_logs limit 10;

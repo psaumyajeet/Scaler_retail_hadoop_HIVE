@@ -1,0 +1,8 @@
+SELECT 
+    order_month,
+    COUNT(DISTINCT customer_key) AS monthly_active_customers,
+    COUNT(DISTINCT order_id) AS total_orders,
+    ROUND(SUM(net_amount), 2) AS monthly_revenue
+FROM fact_sales_analytics
+GROUP BY order_month
+ORDER BY order_month;

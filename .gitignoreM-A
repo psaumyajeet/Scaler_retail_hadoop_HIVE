@@ -1,0 +1,7 @@
+# Environments & Dependencies
+.venv/ venv/ env/ ENV/ node_modules/ .ipynb_checkpoints/
+# Massive Data & Logs
+*.csv *.txt *.json *.log *.zip *.tgz *.gz
+# IDE & System configs
+.metadata/
+.recommenders/
