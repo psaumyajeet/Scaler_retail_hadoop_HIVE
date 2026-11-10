@@ -1,1 +1,1 @@
-Queries folder contains SQL queries asked to run after creating snslytics layer
+Queries folder contains SQL queries asked to run after creating analytics layer
